@@ -1,0 +1,684 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <style>
+            html{
+                scroll-behavior: smooth;
+            }
+            
+
+            body{
+                overflow-x: hidden;
+                margin:0;
+                padding:0;
+                background-color: black;
+                background-attachment:scroll;
+                font-family: 'Segoe UI', sans-serif;  
+
+            }
+            .name{
+                color: white;
+                margin-left:10px;
+
+            }
+            .navbar{
+                height:80px;
+                align-items:center;
+                width:100%;
+                justify-content:space-between;
+                display:flex;
+                margin:0px;
+                flex-wrap:nowrap;
+            }
+            .navbar ul{
+                list-style-type:none;
+                align-items: center;
+                display:flex;
+                gap:40px;
+                margin-right:30px;
+            }
+            .navbar ul li a{
+                text-decoration:none;
+                color: white;
+                font-size: 20px;
+            }
+            .navbar ul li a:hover{
+                color:red;
+            
+            }
+            .degree{
+                margin-top: 40px;
+                color: rgb(0, 51, 255);
+                font-size: 40px;
+                text-align: center;     
+            }
+            .state{
+                text-align: center;
+                color:rgba(255, 255, 255, 0.6); 
+                font-size: 30px;
+                margin-top:20px;
+            }
+            .pro{
+                border-radius:30px;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+                height:300px;
+                margin-top: 60px;
+                transition: transform 0.3s ease;
+            
+            }
+            .pro:hover{
+                transform:scale(1.05);
+            }
+            .cv {
+                    
+                background-color: #9e9e9e;               
+                padding: 10px 30px;         
+                border-radius: 50px;             
+                font-size: 18px;
+                font-family: Arial, sans-serif;
+                font-weight: 500;
+                transition: background-color 0.3s ease;
+               }
+
+            .cv:hover {
+                background-color: #7a7a7a;
+                color: blue !important;
+                
+            }
+            .sect{
+                margin-top:100px;
+                border-radius:14px;
+                padding:10px;
+                background-color: rgba(255, 255, 255, 0.1);
+                transition: transform 0.3s, box-shadow 0.3s;
+
+            }
+            .social-icons{
+                display: flex;
+                justify-content: center;
+                gap:50px;
+                margin-top:20px;
+            }
+           
+            .social-icons a:hover{
+                transform: scale(1.05);
+            }
+
+                .social-button {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                background-color: #f3f3f3;
+                color: #333;
+                padding: 10px 20px;
+                border-radius: 30px;
+                text-decoration: none;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                transition: background-color 0.3s ease;
+                }
+
+                .social-button i {
+                color: #a259ff; /* purple-like color */
+                font-size: 18px;
+                }
+
+               
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+            .sect h1{
+                font-size: 35px;
+                text-align: center;
+                color:white;
+
+            }
+            .card-container{
+                display: flex;
+                align-items: center;
+                justify-content:center;
+                gap:40px;
+                flex-wrap: nowrap;
+
+            }
+            .cards{
+                width:400px;
+                height:500px;
+                background-color: white;
+                border-radius: 14px;
+                padding:5px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            
+                
+            }
+            .cards:hover{
+                transform: scale(1.05);
+
+
+            }
+            .cards img{
+                width:100%;
+                height:200px;
+                border-radius:14px;
+            }
+            .cards h2{
+                font-family: 'Inter', sans-serif;
+            }
+            .cards p{
+                font-family: 'Inter', sans-serif;
+                font-size: 15px;
+            }
+            .sk{
+                display: flex;
+                gap:5px;
+            }
+            button{
+                
+                border: blue solid 2px;
+                border-radius: 15px;
+                padding:5px;
+            }
+            .git{
+                text-decoration: none;
+                display: inline-block;
+                color: white;
+                margin-top: 30px;
+                font-weight:bolder;
+                padding:10px;
+                background-color: blue;
+                border: none;
+                border-radius:14px;
+    
+            }
+           
+            .card-skill{
+                display: flex;
+                margin-left: 10px;
+                margin-right:10px;
+                align-items: center;
+            
+                justify-content: center;
+                gap:40px;
+                flex-wrap: nowrap;
+            }
+            .cardsk{
+                width:400px;
+                height:400px;
+                background-color: white;
+                border-radius: 14px;
+                padding:5px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .cardsk img{
+                height:70px;
+                width:70px;
+            }
+            .skills{
+                margin-top:40px;
+                display: flex;
+                align-items: center;
+                margin-bottom: 30px;
+                justify-content: center;
+                gap:60px;
+            }
+            .cardsk:hover{
+                transform: scale(1.05);
+            }
+            .timeline{
+                margin-left:auto;
+                margin-right:auto;
+                max-width:750px;
+                padding:25px;
+                display:grid;
+                grid-template-columns:1fr 3px 1fr;
+                color:white;
+            }
+            .timeline_component{
+                margin:0 20px 20px 20px;
+            }
+            .timeline_date_right{
+                text-align: right;
+            }
+            .timeline_middle{
+                position:relative;
+                background:white;
+            }
+            .timeline_point{
+                position: absolute;
+                top:0;
+                left:50%;
+                transform:translateX(-50%);
+                width:15px;
+                height:15px;
+                background-color:white;
+                border-radius:50%;
+            }
+            .timeline_component_bg{
+                margin-bottom: 45px;
+                background-color:white;
+                box-shadow:0 0 5px rgb(0,0,0,0.2);
+                transform:transform 0.6s ease, box-shadow 0.6s ease;
+                border-radius: 10px;
+
+            }
+            .timeline_component_bg:hover{
+                transform: scale(1.05);
+            }
+
+        
+            .timeline_title{
+                padding-left:9px;
+                color: #111114;
+            }
+            .timeline_p{
+                padding: 10px;
+                font-size:17px;
+                font-family: 'Roboto', sans-serif;
+                color: #111114;
+            }
+            .main{
+                display: grid;
+                grid-template-columns:1fr 1fr;
+                justify-content: center;
+                gap:40px;
+            }
+            .grid{
+                background: white;
+                border-radius: 14px;
+                padding: 20px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s, box-shadow 0.3s;
+            }
+            .links{
+                text-decoration: none;
+            }
+            .grid p i {
+                margin-right: 8px;
+                vertical-align: middle;
+            }
+            form input, form textarea {
+            width:90%;
+            font-size: 14px;
+            margin-bottom:17px;
+            border-radius: 6px;
+            padding-left: 8px;
+            border: 1px solid #ccc;
+            }
+            form input{
+            height:50px;
+            }
+        
+
+
+            form button {
+            padding: 10px 20px;
+            border: none;
+            background: #0078d4;
+            color: white;
+            cursor: pointer;
+            border-radius: 6px;
+            margin-right: 30px;
+            }
+
+            form button:hover {
+            background-color: #005a9e;
+            }
+            .grid:hover{
+                transform: scale(1.05);
+            }
+            footer{
+                background-color: rgba(255, 255, 255, 0.167);
+                transition: transform 0.3s, box-shadow 0.3s;
+                text-align: center;
+                color: white;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap:10px;
+                justify-content:center;
+                margin: 0px;
+                padding:10px;
+                margin-top:30px;
+
+            }
+            
+           
+            footer  ul{
+                text-align: center;
+                display: flex;
+                gap:40px;
+                align-items: center;
+                list-style-type: none;
+                
+
+            }
+            footer ul li a {
+                display: flex;
+                text-decoration: none;
+                color: white;
+                font-size: 15px;
+            }
+            .soc{
+                display: flex;
+                gap:35px;
+            }
+            .soc-link{
+                text-decoration: none;
+            
+                align-items: center;
+                display:flex;
+                flex-direction: column;
+                gap:10px;
+            }
+            .soc i{
+                font-size: 25px;
+            }
+            .facebook{
+                color:#3b5998;
+            }
+            .instagram{
+                color: #e1306c;
+
+            }
+            .linkedin{
+
+                color: #0077b5;
+            }
+            .github{
+                color: #a259ff;
+            }
+            .facebook:hover,
+            .linkedin:hover,
+            .instagram:hover, 
+            .github:hover {
+                transform: scale(1.05);
+
+            }
+    
+        
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </style>
+
+    </head>
+    <body>
+        <div class="navbar">
+            <h1 class="name">Mesandu Gunarwardhana</h1>
+            <ul>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#skills">SKILLS</a></li>
+                <li><a href="#Edu">EDUCATION</a></li>
+                <li><a href="#cont">CONTACT</a></li>
+                <li><a href="#" class="cv">DOWNLOAD CV</a></li>
+
+            </ul>
+        </div>
+        <h1 class="degree">COMPUTER  SCIENCE ENGINEERING</h1>
+        <h3 class="state">UNDERGRADUATE</h3>
+        <img src="pic.png"  class="pro">
+        <div class="social-icons">
+            <a class="social-button" href="https://github.com/Mesandu2007" target="_blank">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            <a class="social-button" href=" https://www.linkedin.com/in/mesandugun2007/" target="_blank">
+                <i class="fab fa-linkedin-in"></i>LinkedIn
+            </a>
+        </div>
+
+       
+
+
+
+
+
+
+
+
+
+        <section class="sect" id="projects">
+            <h1>PROJECTS</h1>
+            <div class="card-container">
+                <div class="cards">
+                    <img src="aqua.png">
+                    <h2>Aquatic Advocates</h2>
+                    <p> This project,Aquatic Advocates, was created for the Semester 2 First Year Web Development module coursework. It is inspired by the UN's 17 Goals, with a focus on the topic of Oceans. </p>
+                    <div class="sk">
+                        <button>HTML/CSS</button>
+                        <button>Java Script</button>
+                    </div>
+                    <a href="#" class="git">View Code</a>
+                </div>
+                 <div class="cards">
+                    <img src="Task2.png">
+                    <h2>Task Managment System</h2>
+                    <p> This project,Task Managment System, was created for the Semester 1 First Year SD2 module coursework. It is a Task Managment System with Search and Sort functionality.Also using Json file handling.</p>
+                    <div class="sk">
+                        <button>Python</button>
+                        <button>Thikinter</button>
+                    </div>
+                    <a href="#" class="git">View Code</a>
+                </div>
+                <div class="cards">
+                    <img src="pass.png">
+                    <h2>Pass Key</h2>
+                    <p> This project,Pass key, is a Email and Password saver.This allow the user to perform CRUD functionality.Also this application is password protected where the user has to enter a password and a username to enter the application. </p>
+                    <div class="sk">
+                        <button>Python</button>
+                        <button>Thikinter</button>
+                    </div>
+                    <a href="#" class="git">View Code</a>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <section class="sect" id="skills">
+            <h1>SKILLS</h1>
+            <div class="card-skill">
+                <div class="cardsk">
+                    <h2><center>Frontend</center></h2>
+                    <div class="skills">
+                        <img src="HTML5.png">
+                        <img src="CSS3.png">
+                    </div>
+                    <div class="skills">
+                        <img src="JavaScript.png">
+                        <img src="JavaFX.png">
+                    </div>
+                    <div class="skills">
+                        <img src="react.png">
+                    </div>
+                </div>
+                <div class="cardsk">
+                    <h2><center>Backend</center></h2>
+                    <div class="skills">
+                        <img src="Spring.png">
+                        <img src="Java.png">
+                    </div>
+                    <div class="skills">
+                        <img src="mysql.png">
+                        
+                    </div>
+                    
+                </div>
+                <div class="cardsk">
+                    <h2><center>Languages</center></h2>
+                    <div class="skills">
+                        <img src="python.png">
+                        <img src="Java.png">
+                    </div>
+                    <div class="skills">
+                        <img src="Java.png">
+                        <img src="JavaScript.png">
+                        
+                    </div>
+                </div>
+                <div class="cardsk">
+                    <h2><center>Tools and IDLES</center></h2>
+                    <div class="skills">
+                        <img src="pycharm.jpeg">
+                        <img src="Int.jpeg">
+                    </div>
+                    <div class="skills">
+                        <img src="vs.jpeg">
+                        <img src="thonny.png">
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sect" id="Edu">
+            <h1>EDUCATION</h1>
+            <div class="timeline">
+                <div class="timeline_component">
+                    <div class="timeline_date timeline_date_right">January 20, 2025</div>
+                </div>
+                <div class="timeline_middle">
+
+                    <div class="timeline_point"></div>
+
+                </div>
+                <div class="timeline_component timeline_component_bg">
+                    <h2 class="timeline_title">Informatics Institute of Technology(IIT)</h2>
+                    <p class="timeline_p">Currently pursuing a Bachelor of Computer Science Engineering at IIT which is affiliated with the University of Westminster.</p>
+
+                </div>
+
+
+                <div class="timeline_component timeline_component_bg">
+                    <h2 class="timeline_title">Lyceum International School Panadura(A/L)</h2>
+                    <p class="timeline_p">Did my A/L in Maths stream scoring a result of B,C,C</p>
+                </div>
+                <div class="timeline_middle">
+                    <div class="timeline_point"></div>
+                </div>
+                <div class="timeline_component">
+                    <div class="timeline_date timeline_date">June 10, 2024</div>
+                </div>
+
+                <div class="timeline_component timeline_component_bg">
+                    <h2 class="timeline_title">Lyceum International School Panadura(O/L)</h2>
+                    <p class="timeline_p">Did my O/L in Science stream scoring a result of 5A and 2B.</p>
+                </div>
+                <div class="timeline_middle">
+                    <div class="timeline_point"></div>
+                </div>
+                <div class="timeline_component">
+                    <div class="timeline_date timeline_date">June 5, 2022</div>
+                </div>
+            </div>
+        </section>
+        <section class="sect" id="cont">
+            <h1>GET IN TOUCH</h1>
+            <div class="main">
+                <div class="grid">
+                    <h2>Contact Information</h2>
+                    <p>Feel free to reach out through any of the following channels. I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p><br>
+                    <p ><i class="fas fa-envelope"></i>Email: <a href="mailto:bla@gmail.com" class="links" target="_blank"> mesandugunarwardhana@gmail.com</a></p>
+                    <p><i class="fas fa-phone"></i>Phone: +94 123 456 789</p>
+                    <p>
+                    <i class="fas fa-map-marker-alt"></i>Location
+                    <a href="https://maps.app.goo.gl/HtoaAV8J5dEqS1oZ9" class="links" target="_blank">
+                        Panadura, Sri Lanka
+                    </a>
+                    </p>
+
+                  
+                </div>
+                <div class="grid">
+                    <h2>Send a Message</h2>
+                     <form>
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <input type="tel" placeholder="Your Phone Number">
+                        <textarea rows="4" placeholder="Your Message" required></textarea>
+                        <button type="submit">Send</button>
+                        <button type="reset">Reset</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <footer>
+    
+
+                        <h2>Mesandu Gunarwardhana</h2>
+                
+                        <ul>
+                            <li><a href="#projects">PROJECTS</a></li>
+                            <li><a href="#skills">SKILLS</a></li>
+                            <li><a href="#Edu">EDUCATION</a></li>
+                            <li><a href="#cont">CONTACT</a></li>
+                            <li><a href="#">DOWNLOAD CV</a></li>
+                        </ul>
+                        <div class="soc">
+                            <a href=" " target="_blank" class="soc-link facebook" >
+                                <i class="fab fa-facebook-f  facebook"></i>Facebook
+                            </a>
+                            <a href="https://www.instagram.com/mesandu_2/" target="_blank" class="soc-link instagram">
+                                <i class="fab fa-instagram  instagram"></i>Instagram
+                            </a>
+                            <a href="https://www.linkedin.com/in/mesandugun2007/" target="_blank" class="soc-link linkedin">
+                                <i class="fab fa-linkedin-in  linkedin"></i>LinkedIn    
+                            </a>
+                            <a href="https://github.com/Mesandu2007" target="_blank" class="soc-link github">
+                                <i class="fab fa-github github"></i>GitHub 
+                            </a>
+
+                        </div>
+                        <p>&copy;2025 Mesandu Gunarwardhana. All rights reserved.</p>
+
+                        
+             
+    
+        </footer>
+
+
+
+
+            
+        
+           
+    </body>
+   
+
+
+
+</html>

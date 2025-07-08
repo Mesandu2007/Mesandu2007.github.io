@@ -1,3 +1,4 @@
+
 <html>
     <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -156,7 +157,7 @@
                 align-items: center;
                 justify-content:center;
                 gap:40px;
-                flex-wrap: wrap;
+                flex-wrap: nowrap;
 
             }
             .cards{
@@ -414,9 +415,34 @@
                 transform: scale(1.05);
 
             }
-    
-    
-    
+            .center-typing-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.typing-text {
+  font-size: 40px;
+  font-family: 'Segoe UI', sans-serif;
+  color: rgb(0, 51, 255);
+  border-right: 3px solid #0078d4;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 3s steps(30, end) forwards, blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 32ch; } /* Adjust based on character count */
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+        
         
                     
 
@@ -450,7 +476,9 @@
 
             </ul>
         </div>
-        <h1 class="degree">COMPUTER SCIENCE ENGINEERING</h1>
+        <div class="center-typing-container">
+            <h1 class="type-text">COMPUTER SCIENCE ENGINEERING</h1>
+        </div>
         <h3 class="state">UNDERGRADUATE</h3>
         <img src="pic.png"  class="pro">
         <div class="social-icons">
@@ -502,16 +530,6 @@
                     <div class="sk">
                         <button>Python</button>
                         <button>Thikinter</button>
-                    </div>
-                    <a href="#" class="git">View Code</a>
-                </div>
-                <div class="cards">
-                    <img src="feed2.png">
-                    <h2>Simple Feedback Form</h2>
-                    <p>A simple feedback form which uses javascript for input,validation and submits the form to the given email address.Also this form uses CSS for  styling</p>
-                    <div class="sk">
-                        <button>HTML/CSS</button>
-                        <button>Java Script</button>
                     </div>
                     <a href="#" class="git">View Code</a>
                 </div>

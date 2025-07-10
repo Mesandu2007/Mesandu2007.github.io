@@ -10,6 +10,7 @@
             body{
                 overflow-x: hidden;
                 margin:0;
+                margin-right:0px;
                 padding:0;
                 background-color: black;
                 background-attachment:scroll;
@@ -414,6 +415,33 @@
                 transform: scale(1.05);
 
             }
+            .bth{
+                display: flex;
+                gap:10px;
+            }
+            .prev{
+                text-decoration: none;
+                display: inline-block;
+                color: white;
+                margin-top: 30px;
+                font-weight:bolder;
+                padding:10px;
+                background-color: red;
+                border: none;
+                border-radius:14px;
+    
+            }
+              @media (max-width: 768px) {
+                .card-container {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .cards {
+                    width: 90%;
+                    height: auto;
+                }
+            }
     
     
     
@@ -483,7 +511,10 @@
                         <button>HTML/CSS</button>
                         <button>Java Script</button>
                     </div>
-                    <a href="#" class="git">View Code</a>
+                    <div class="bth">
+                          <a href="#" class="git">View Code</a>
+                          <a href="#" class="prev">Live Preview</a>
+                    </div>      
                 </div>
                  <div class="cards">
                     <img src="Task2.png">
@@ -512,8 +543,12 @@
                     <div class="sk">
                         <button>HTML/CSS</button>
                         <button>Java Script</button>
-                    </div>
-                    <a href="https://github.com/Mesandu2007/Simple-Feedback-Form/blob/master/javascricptform.html" class="git">View Code</a>
+                    </div> 
+                    <div class="bth">
+                        <a href=" https://github.com/Mesandu2007/Simple-Feedback-Form/blob/master/index.html " class="git">View Code</a>
+                        <a href=" https://github.com/Mesandu2007/Simple-Feedback-Form/blob/master/index.html " class="prev">Live Preview</a>
+
+                    </div>    
                 </div>
             </div>
         </section>
@@ -637,12 +672,12 @@
                 </div>
                 <div class="grid">
                     <h2>Send a Message</h2>
-                     <form>
-                        <input type="text" placeholder="Your Name" required>
-                        <input type="email" placeholder="Your Email" required>
-                        <input type="tel" placeholder="Your Phone Number">
-                        <textarea rows="4" placeholder="Your Message" required></textarea>
-                        <button type="submit">Send</button>
+                     <form   action="https://formsubmit.co/mesandugunarwardhana@gmail.com" method="POST">
+                        <input  placeholder="Your Name" id="name" name="name">
+                        <input  placeholder="Your Email" id="email" name="email" >
+                        <input  placeholder="Your Phone Number" id="contact" name="contact">
+                        <textarea  placeholder="Your Message" id="message" name="message" rows="5"></textarea>
+                        <button id="sub" >Send</button>
                         <button type="reset">Reset</button>
                     </form>
                 </div>
@@ -681,6 +716,42 @@
              
     
         </footer>
+        <script>
+            document.getElementById("sub").onclick=function(e){
+                e.preventDefault();
+                let name=document.getElementById("name").value;
+                let email=document.getElementById("email").value;
+                let contact=document.getElementById("contact").value;
+                let message=document.getElementById("message").value;
+
+                if(name===""){
+                    alert("Pls enter your name!");
+                    return;
+                }
+                if(email===""){
+                    alert("Pls enter your email address!");
+                    return;
+                }
+                if(!email.includes("@")){
+                    alert("Pls enter a valid email with @ sign!");
+                    return;
+                }
+                if(contact===""){
+                    alert("Pls enter a contact number!");
+                    return;
+                }
+                if(isNaN(contact)){
+                    alert("Pls enter a valid contact number!");
+                    return;
+                }
+                if(message===""){
+                    alert("Pls enter a message!");
+                    return;
+
+                }
+                e.target.closest("form").submit();
+            }
+        </script>
 
 
 

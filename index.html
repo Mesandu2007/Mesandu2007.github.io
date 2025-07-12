@@ -483,22 +483,30 @@
                     width: 250px;
                     width: 90%;
                 }
-                  .timeline {
-                    grid-template-columns: 1fr;
-                    justify-content: center;
+                      .timeline {
+                    grid-template-columns: 1fr 3px 1fr;
                 }
-                .timeline_middle {
-                    display: none;
-                }
+
                 .timeline_component {
                     margin: 10px 0;
-                    text-align: center;
                 }
+
                 .timeline_date_right {
-                    text-align: center;
+                    text-align: left; /* Or right depending on which side you prefer */
                 }
-        }
-             
+
+                .timeline_component:nth-child(odd) {
+                    grid-column: 1; /* Dates on the left */
+                }
+
+                .timeline_component:nth-child(even) {
+                    grid-column: 3; /* Boxes on the right */
+                }
+
+                .timeline_middle {
+                    grid-column: 2;
+                }
+         
 
 
 

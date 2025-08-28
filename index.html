@@ -176,7 +176,23 @@
             
                 
             }
-            .cards:hover{
+            .cards::before {
+                content: "";
+                position: absolute;
+        
+                inset: 0;
+                border: 34px solid transparent;
+                border-radius: 14px;
+                background: linear-gradient(90deg, red, blue, purple, red);
+                background-size: 300% 300%;
+                -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+                -webkit-mask-composite: xor;
+                mask-composite: exclude;
+                animation: none;
+                transition: all 0.3s ease;
+            }
+            .cards:hover::before{
+                animation: borderMove 3s linear infinite;
                 transform: scale(1.05);
                 border-bottom: #e1306c;
 
